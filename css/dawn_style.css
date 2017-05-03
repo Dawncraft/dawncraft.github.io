@@ -1,0 +1,150 @@
+/*
+ 曙光工艺工作室官网自定义css样式表
+ 作者：Dawncraft Studio
+ ffa400
+*/
+
+html, body
+{
+	height: 100%;
+	width: 100%;
+}
+
+body
+{
+	background: white;
+	font-family: 'Open Sans', sans-serif;
+	padding-top: 56px;
+}
+
+/* 屏幕大小 */
+
+
+/* 全局控件 */
+a:hover, a:focus
+{
+	color: #ffa400;
+}
+
+/* 导航栏样式 */
+.navbar-default
+{
+	border: none;
+	box-shadow: 0px 2px 8px 0px rgba(48, 48, 48, 0.2);
+}
+.navbar-brand
+{
+	margin: 0;
+	font-size: 24px;
+	font-weight: bold;
+	transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+}
+.navbar-default .navbar-brand:hover
+{
+	color: #ff8c00;
+}
+.nav
+{
+	margin-left: 32px;	
+}
+.nav > li > a
+{
+	font-weight: bold;
+	border-bottom: 4px solid transparent;
+	transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+}
+.navbar-default .nav > li > a:hover
+{
+	color: #ff8c00;
+	color: rgba(255, 140, 0, 0.75);
+	background-color: #f2f2f2;
+	border-bottom-color: #ff8c00;
+	border-bottom-color: rgba(255, 140, 0, 0.75);
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus
+{
+	color: #ff8c00;
+	background-color: #eeeeee;
+	border-bottom-color: #ff8c00;
+}
+.navbar-default .navbar-toggle
+{
+	border: none;
+}
+.navbar-default .navbar-toggle .icon-bar
+{
+	background: #ff8c00;
+	border-color: transparent;
+}
+
+#qrcode
+{
+	margin-left: 12px;
+}
+
+/* 轮播图样式 */
+.carousel
+{
+	margin-bottom: 12px;
+	box-shadow: 0px 2px 12px 0px rgba(48, 48, 48, 0.8);
+}
+.carousel .item
+{
+	background-color: #777777;
+}
+.carousel-inner > .item > img
+{
+	height: 800px;
+	margin: auto;
+}
+@media (max-width: 768px)
+{
+	.carousel-inner > .item > img { height: 400px; }
+}
+
+/* 介绍样式 */
+#home
+{
+	background: #f9f9f9;
+	padding: 32px 0 48px 0;
+}
+
+/* 页脚样式 */
+footer
+{
+	color: #777777;
+	background: #f8f8f8;
+	border-top: 1px solid #ff8c00;
+	padding: 24px 0 12px 0;
+}
+
+/* 回到顶部按钮样式 */
+.gotop
+{
+	color: #ffffff;
+	background-color: #ff8c00;
+	font-size: 20px;
+	width: 48px;
+	height: 48px;
+	line-height: 48px;
+	text-align: center;
+	bottom: 24px;
+	right: 24px;
+	border-radius: 60%;
+	position: fixed;
+	transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+}
+
+.gotop:hover
+{
+	color: #000000;
+	background-color: #ffa400;
+}
