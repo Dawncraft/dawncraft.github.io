@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-
 <html>
 	<head>
-		<meta http-equiv="Content-Type" content="tezt/html; charset=utf-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 		<link rel="icon" href="icon.ico" />
@@ -190,8 +189,8 @@
 	</head>
 	
 	<body>
-        <div class="jumbotron" style="background: #e2b29f;">
-            <ul id="welcome" class="list-group" align="center" style="position: fixed; width: 300px">
+        <div class="jumbotron" style="background: #e2b29f; text-align: center;">
+            <ul id="welcome" class="list-group" style="width: 300px; height: 400px; position: absolute; top: 0; left: 0; right: 0; bottom: 0; margin: auto;">
                 <li class="list-group-item">
                     <h4>曙光工艺留言板v1.0</h4>
                 </li>
@@ -202,7 +201,7 @@
                             <button class="btn btn-default" type="button" onclick="onClick()">走你!</button>
                         </span>
                     </div>
-                    <div id="error" class="alert alert-danger" role="alert" style="margin: 0; padding: 0; height: 25px">这是一条警告信息</div>
+                    <div id="error" class="alert alert-danger" role="alert" style="margin: 0; padding: 0; height: 25px"></div>
                 </li>
                 <li class="list-group-item">
                     <div id="qrcode">
@@ -210,7 +209,7 @@
                     </div>
                 </li>
                 <li class="list-group-item">
-                    <h5>Copyright &copy; 2015-2018 曙光工艺工作室</h5>
+                    <h5 id="copyright">Copyright &copy; 2015-{year} 曙光工艺工作室</h5>
                 </li>
             </ul>
 
@@ -222,14 +221,60 @@
 
                 <div class="well">
                     <p>即将跳转至您的留言板 喵(^･ｪ･^)~</p>
-                    <a href="./index.html">如果您的浏览器未正常跳转,请单击这里</a>
+                    <a href="javascript:redirect()">如果您的浏览器未正常跳转,请单击这里</a>
                 </div>
             </div>
         </div>
 
 		<script>
+            String.prototype.format = function(args)
+            {
+                if (arguments.length > 0)
+                {
+                    var result = this;
+                    if (arguments.length == 1 && typeof (args) == "object")
+                    {
+                        for (var key in args)
+                        {
+                            var reg = new RegExp("({" + key + "})", "g");
+                            result = result.replace(reg, args[key]);
+                        }
+                    }
+                    else
+                    {
+                        for (var i = 0; i < arguments.length; i++)
+                        {
+                            if (arguments[i] == undefined)
+                            {
+                                return "";
+                            }
+                            else
+                            {
+                                var reg = new RegExp("({[" + i + "]})", "g");
+                                result = result.replace(reg, arguments[i]);
+                            }
+                        }
+                    }
+                    return result;
+                }
+                else
+                {
+                    return this;
+                }
+            }
+		</script>
+
+		<script>
+            $('#password').keyup(function(event)
+            {
+                if (event.keyCode == 13) onClick();
+            });
             $('#error').hide();
             $('#qrcode').qrcode({render: "canvas", width: 128, height: 128, text: window.location.href});
+            var copyright = $('#copyright').text().format({year: (new Date()).getFullYear()});
+            $("#copyright").text(copyright);
+
+            var destination = "";
 
             function onClick()
             {
@@ -239,33 +284,39 @@
                     $('#error').hide();
                     goTo("group.html");
                 }
-                else if (password == "LL")
+                else if (password == "刘金昊")
                 {
                     $('#error').hide();
-                    goTo("liling.html");
+                    goTo("loveagreement.html");
                 }
                 else if (password == "")
                 {
-                    $('#error').html("不能输入空内容!");
+                    $('#error').html("请输入暗语!");
                     $('#error').show();
                 }
                 else
                 {
-                    $('#error').html("密码错误,请重试!");
+                    $('#error').html("暗语错误,请重试!");
                     $('#error').show();
                 }
             }
 
             function goTo(site)
             {
+                destination = site;
                 $('#welcome').fadeOut("slow", function()
                 {
                     $('#animation').css("visibility", "visible");
                     setTimeout(function()
                     {
-                        window.location.href = site;
+                        redirect();
                     }, 3000);
                 });
+            }
+
+            function redirect()
+            {
+                window.location.href = destination;
             }
 		</script>
 	</body>

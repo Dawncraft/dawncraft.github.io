@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<link rel="icon" href="icon.ico" />
+		<title>情侣协议书</title>
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+        <style>
+            body {
+                width: 100%;
+                background: rgb(253, 238, 245);
+            }
+
+            .letter {
+                width: 100%;
+                background: url(loveagreement_bg.jpg);
+                background-size: contain;
+                background-position: 50% 0%;
+                background-repeat: repeat-y;
+                font-size: 100%;
+            }
+
+            .text {
+                width: 75%;
+            }
+
+            @media (min-width: 768px) {
+                .text {
+                    font-size: 150%;
+                }
+            }
+
+            @media (min-width: 992px) {
+                .text {
+                    font-size: 200%;
+                }
+            }
+
+        </style>
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/jquery.qrcode.min.js"></script>
+	</head>
+	
+	<body>
+        <div class="letter">
+            <div class="center-block text">
+                <h2 class="text-center" style="font-weight: bold;">情侣协议书</h3>
+                <p>刘金昊与王昱于2019年1月18日签定情侣协议书，此协议书于双方感情破裂时终结</p>
+                <p>此协议书内容如下：</p>
+                <ol>
+                    <li>可以吵架可以发脾气，但不可以说分手</li>
+                    <li>可以偶尔晚点睡，但是不可以天天熬夜</li>
+                    <li>你可以冲我发脾气，但不能不理我</li>
+                    <li>你可以骂我训我，但不可以离开我</li>
+                    <li>你脾气不好没关系，我喜欢就好</li>
+                    <li>你可以和朋友出去玩，但是要告诉我跟谁在哪里，别让我为你担心</li>
+                    <li>遇事可以哭，但不可以硬扛</li>
+                    <li>不开心心烦可以，但不可以不告诉我瞒着我</li>
+                </ol>
+            </div>
+            <button class="btn btn-primary btn-lg center-block" data-toggle="modal" data-target="#pledge">我同意</button>
+            <img src="loveagreement_footage.jpg" style="width: 100%;">
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="pledge" tabindex="-1" role="dialog" aria-labelledby="pledge">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="pledge">我发誓</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <img src="loveagreement_pledge.jpg" style="width: 100%;">
+                            <a class="btn btn-link btn-lg center-block" href="loveagreement_card.jpg" download="刘金昊爱的誓言">将刘金昊爱的誓言保存到本地</a>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">返回</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</body>
+</html>
