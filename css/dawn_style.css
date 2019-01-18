@@ -47,7 +47,7 @@ a:hover, a:focus
 }
 .nav
 {
-	margin-left: 32px;	
+	margin-left: 32px;
 }
 .nav > li > a
 {
@@ -85,7 +85,7 @@ a:hover, a:focus
 
 #qrcode
 {
-	margin-left: 12px;
+	margin-left: 20px;
 }
 
 /* 轮播图样式 */

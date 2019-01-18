@@ -1,0 +1,138 @@
+<!-- <!DOCTYPE html> -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="tezt/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<!-- Bootstrap框架CSS样式表 -->
+		<link rel="stylesheet" href="../css/bootstrap.min.css" />
+		<!-- 网页自定义css样式表 -->
+		<link rel="stylesheet" href="../css/dawn_style.css" />
+		
+		<!-- 图标 -->
+		<link rel="icon" href="icon.ico" />
+		<!-- 标题 -->
+		<title>曙光工艺 - 留言板</title>
+	</head>
+	
+	<body style="padding-top: 20px;">
+        <!-- 顶部导航栏 -->
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">打开导航</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">曙光工艺工作室</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li><a href="../index.html">首页</a></li>
+                        <li><a href="../team.html">团队</a></li>
+                        <li><a href="../projects.html">项目</a></li>
+                        <li><a href="../join.html">加入我们</a></li>
+                        <li class="active"><a href="#">留言板<span class="sr-only">(当前)</span></a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">分享 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="javascript:alert('尚未开放,敬请期待');">分享给QQ好友</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li class="dropdown-header">扫二维码分享</li>
+                                <li><div id="qrcode"></div></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:alert('尚未开放,敬请期待');">去曙光工艺首页</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- 并不好使的巨幕 -->
+        <div class="jumbotron">
+            <div class="container">
+                <div class="row col-md-12">
+                    <div id="warning" class="alert alert-warning alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"><strong> 警告: </strong>该页面不受曙光工艺工作室官方支持,并随时有可能被移除</span>
+                    </div>
+                </div>
+                <!-- 留言板 -->
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li id="0" role="presentation"><a href="javascript:setActive(0)">主页</a></li>
+                            <li id="1" role="presentation"><a href="javascript:setActive(1)">王昕竹</a></li>
+                            <li id="2" role="presentation"><a href="javascript:setActive(2)">冯泽晨</a></li>
+                            <li id="3" role="presentation"><a href="javascript:setActive(3)">姐姐</a></li>
+                            <li id="4" role="presentation"><a href="javascript:setActive(4)">刘家孚</a></li>
+                            <li id="5" role="presentation"><a href="javascript:setActive(5)">梁书瑞</a></li>
+                            <li id="6" role="presentation"><a href="javascript:setActive(6)">张弛</a></li>
+                            <li id="7" role="presentation"><a href="javascript:setActive(7)">俞英豪</a></li>
+                            <li id="8" role="presentation"><a href="javascript:setActive(8)">徐扬</a></li>
+                            <li id="9" role="presentation"><a href="javascript:setActive(9)">吴晨</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-9">
+                        <p id="content">内容</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 页脚 -->
+        <footer class="text-center" style="margin-top: -30px;">
+            <div class="container">
+                <div class="row">
+                    <p>Copyright &copy; 2015-2018 曙光工艺工作室</p>
+                </div>
+            </div>
+        </footer>
+	
+		<!-- 加载插件 -->
+		<script src="../js/jquery.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/jquery.qrcode.min.js"></script>
+		
+		<script>
+			setActive(0);
+			$('#qrcode').qrcode({render: "canvas", width: 96, height: 96, text: "https://dawncraft.github.io/"});
+
+            function setActive(number)
+            {
+                for(var i = 0; i <= 9; i++)
+                {
+                    $('#' + i).removeClass("active");
+                }
+                $('#' + number).addClass("active");
+                setText(number);
+            }
+
+            function setText(number)
+            {
+                var text = "";
+                switch(number)
+                {
+                    default: 
+                    case 0: text = "欢迎来到我的留言板,从左侧选择一个栏目来读取留言!</p><p>PS: 说实话,我是有很多话想说的,所以呢,加班加点写了这么个静态网页出来,没有服务器,这些话都是放在网页里的,不需要那个密码也能进的来.时间不够了,话有些少了,不过事实上我的目标是提供一个可以给大家用的留言板平台,所以如果有给别人的留言,可以提交给我,也接受免费的定制.嗯,看看自己的留言吧.啊,别人的就别看了</p><p>喵喵喵~"; break;
+                    case 1: text = "组长好啊 喵~</p><p>分班了呢,感觉不太现实,我走了三组就没数学大佬了哈哈哈😂嗯,不过绊脚石还是绊脚石,承载着旧十班的荣光,把那些新来的都绊倒[笑],嗯,我为啥想不起来有啥可说的了...那就不说了,又不是见不到了...</p><h3>愿三组永不倒</h3><p>喵~"; break;
+                    case 2: text = "晨姐 喵~</p><p>好巧啊,还是在一个班,听我妈说1班刚开始平均名次比2班高,所以把你划过来了,嗯,不过能来就是好事,你的辛苦我都是看在眼里的,为了保级而战.不过无论过去怎么样,那都已经成为过去了,现在是你在13班的全新开始,加油↖(^ω^)↗</p><p>哦对了,以后再有ppt我可不做了,打死我也不做了,哼</p><p>喵~"; break;
+                    case 3: text = "首先,谢谢姐姐的明信片 喵~</p><p>我们好像确实没同桌过,<s>所以现在还在一个班</s>不过我们还在一个班里呐,这也是很幸运的事情呐.其实我没啥神奇的也不怎么厉害,只是有耐心钻研而已,嗯<s>,我也相信我能变成人</s>.<h3>一起走下去~</h3>"; break;
+                    case 4: text = "孚哥,你还说姐姐呢,看看你,梁书瑞和你一座,走了,徐扬和你一座,走了,姐姐和你一座,现在连着我也走了,不过你还在呢,嗯,有不会的题可以问我,不过我才不去找你呢,有篮球比赛的话我去给你加油.没啥说的,加油吧~</p><p>哦对了,我刚才看了一眼单,郭振博好像来我这班了"; break;
+                    case 5: text = "<h1>我等着你回来!</h1>PS:没吓到你吧😂"; break;
+                    case 6: text = "先有弛神后有天 弛神好啊 喵~</p><p>你也是十分神奇了,还是一个班的,没啥说的.一到假期我就开始瞎忙(<a href='../projects.html'>这些</a>),以后放假再找你玩</p><p>加油~喵~"; break;
+                    case 7: text = "放浪形骸的门哥 泥嚎啊</p><p>好像还和我一个班,嗯,嗯,嗯,那就一个班吧,挺好的,我期待你的表现[笑]</p><p>喵~"; break;
+                    case 8: text = "徐扬小姐姐好~</p><p>我对你似乎不太了解呢,不过分班那天刘家孚和王子怡还聊到了你呢,加油,争取回来,虽然不一定能回到三组了</p><p>以上 喵喵喵~"; break;
+                    case 9: text = "还有我自己的?喵喵喵喵喵?我自己想对我自己说的话怎么可能写在这里,你太天真了.</p><p>喵~"; break;
+                }
+                $('#content').html(text);
+            }
+		</script>
+	</body>
+</html>
