@@ -1,254 +1,236 @@
-<!-- <!DOCTYPE html> -->
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 
 <html>
 	<head>
-		<meta http-equiv="Content-Type" content="tezt/html; charset=utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+        <meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		
+		<link rel="icon" href="images/favicon.ico" />
+		<title>曙光工艺 - 项目介绍</title>
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
-		<link rel="stylesheet" href="css/dawn_style.css" />
-		
-		<link rel="icon" href="images/icon.ico" />
-		<title>曙光工艺 - 项目</title>
+		<link rel="stylesheet" href="css/common.css" />
+        <!-- CSS -->
+		<style>
+			/* 内容 */
+			#home
+			{
+				margin-top: 68px;
+			}
+		</style>
 	</head>
 	
-    	<body>
-		<!-- 顶部导航栏 -->
-		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-						<span class="sr-only">打开导航</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="#">曙光工艺工作室</a>
-				</div>
-				<div class="collapse navbar-collapse">
-					<ul class="nav navbar-nav navbar-left">
-						<li><a href="./index.html">首页</a></li>
-						<li><a href="./team.html">团队</a></li>
-						<li class="active"><a href="./projects.html">项目<span class="sr-only">(当前)</span></a></li>
-						<li><a href="./join.html">加入我们</a></li>
-					</ul>
-					<ul class="nav navbar-nav navbar-right">
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">分享 <span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="javascript:alert('尚未开放,敬请期待');">分享给QQ好友</a></li>
-								<li role="separator" class="divider"></li>
-								<li class="dropdown-header">扫二维码分享</li>
-								<li><div id="qrcode"></div></li>
-							</ul>
-						</li>
-						<li><a href="javascript:alert('尚未开放,敬请期待');">去曙光工艺首页</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
+    <body>
+        <!-- 导航栏 -->
+        <nav class="navbar navbar-expand-sm fixed-top navbar-light bg-light">
+            <a class="navbar-brand" href="#">曙光工艺工作室</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">首页</a></li>
+                    <li class="nav-item"><a class="nav-link" href="team.html">团队</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="#">项目<span class="sr-only">(当前)</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="join.html">加入我们</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tools/index.html">工具箱</a></li>
+                    <li class="nav-item"><a class="nav-link" href="messages/index.html">留言板</a></li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="javascript:void(0)" data-toggle="dropdown">分享</a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="javascript:nativeShare.call('qqFriend')">分享给QQ好友</a>
+                            <div class="dropdown-divider"></div>
+                            <span class="dropdown-header">保存二维码来分享</span>
+                            <div class="dropdown-item-text" id="qrcode"></div>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="https://github.com/Dawncraft">GitHub</a></li>
+                    <li class="nav-item"><a class="nav-link" href="http://dawncraft.cc">博客-></a></li>
+                </ul>
+            </div>
+        </nav>
         
-        <!-- 项目 -->
-		<section id="project" class="text-center">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12 col-md-12">
-						<h2>项目</h2>
-						<p>我们有许多正在进行中的项目,主要与我的世界(Minecraft),魔兽争霸3(Warcraft III)有关,也有自研的曙光游戏引擎,曙光游戏平台以及曙光工作室自己的游戏,详情请进入QQ群查看.</p>
-                        <p><br></p>
-                        <h3>魔兽/星际地图系列:末日战争</h3>
-                        <p>从小学5年级开始做的一个系列,到现在还在坑,主要是现在再看小时候写的逻辑,完全说不通啊</p>
-                        <p><br></p>
-                        <h3>侠盗猎车:罪恶都市服务器</h3>
-                        <p>当时是在和王水桶侠盗联机玩,然后想自己开个服务器,然而这东西比我的世界服务器都复杂,所以不了了之了</p>
-                        <p><br></p>
-                        <h3>神秘小镇</h3>
-                        <p>我刚玩我的世界,刚接触红石和命令方块是的创想,里面包含好多个分成各个块的解谜游戏,部分剧情都想好了(抄袭鸡皮疙瘩-百变闯关大冒险系列-午夜商场怪兽派对),奈何当年是1.8时代,命令方块弱势啊,电脑还破,现在想做却没有时间了</p>
-                        <p><br></p>
-                        <h3>小游戏合集</h3>
-                        <p>1.9时代的产物,和刘洪泽一起研究命令方块,研究出了一点成果,于是做了个小游戏合集,目前已经完成了掘一死战,消失的方块,职业战争,跑酷和信仰之跃部分完成,不过1.13技术性更新出了,整个命令系统都被重制,我打算重制到1.13版本,所以半弃坑了,真的好可惜啊,这是我最用心做的地图了</p>
-                        <p><br></p>
-                        <h3>曙光工艺Mod</h3>
-                        <p>还是1.8时代,后来玩服务器玩腻了,大型mod还玩不动,正好单庆卓和石莱提供了一些创意,所以开始做Mod,看着szszss和ustc-zzzz的教程一路摸索着,MC的代码真的很乱,Mod最初是1.8版本的,叫磁力Mod(单庆卓提供的创意),然后加了一点新东西,于是改叫wc的科技Mod,然后加入了彩蛋,所以改叫曙光工艺Mod,这个Mod是不会弃坑的</p>
-                        <p><br></p>
-                        <h3>样式代码输入Mod</h3>
-                        <p>做神秘小镇的时候,想用样式代码,然后到处找方法,2B的太复杂,补丁又是直接修改,直到后来,学了szszss的coremod教程,于是做了这个,目前还差对多版本和多人联机的支持</p>
-                        <p><br></p>
-                        <h3>曙光核心Js</h3>
-                        <p>在做空岛小帮手时发现一些函数其他Js也能用得上,于是有了曙光工具集合,后来学习了js面向对象的理念,所以又加了一些类和更多的东西,最后决定叫做曙光核心Js,目前也是只有一个大概的思路</p>
-                        <p><br></p>
-                        <h3>空岛小帮手</h3>
-                        <p>刚接触Js时的作品,最初只是方便玩空岛的自动挖石机,后来又加入了自动砍树等功能,然后越积越多,逻辑混乱,不得不重写,坑了1年,现在也没完成</p>
-                        <p><br></p>
-                        <h3>生成二维码</h3>
-                        <p>有一次看见二维码一个一个块的,和我的世界很像啊,所以就有了这个想法,然后找到了Qrcode的js类库,改一改,封装一下子就做好了,不过GUI和多线程有点问题,等待完善</p>
-                        <p><br></p>
-                        <h3>曙光工艺服务器</h3>
-                        <p>筹备了三年的巨制,致力于为玩家带来优秀的游戏体验,生存,创造,空岛,海岛,极限,Mod,小游戏,战争,应有尽有,然而都是设想,并未完成</p>
-                        <p>服务器QQ主群:116162023</p>
-                        <p>版本:1.8-1.13 IP:尚未开启</p>
-                        <p><br></p>
-                        <h3>曙光游戏平台</h3>
-                        <p>最初就是个我的世界启动器而已,因为要做自己的游戏,所以改成了游戏平台,正在制作中</p>
-                        <p>里面还会有小游戏,初步计划:砸蛋(宠物),曙光狼人杀,曙光球球大作战</p>
-                        <p><br></p>
-                        <h3>曙光游戏引擎</h3>
-                        <p>一个游戏引擎,正在设想中</p>
-                        <p><br></p>
-                        <h3>神秘的新游戏</h3>
-                        <p>来放个预告,猜猜这是和什么有关的游戏呢</p>
-                        <img src="./images/class1.png">
-                        <p><br></p>
-                        <h3>官方网站</h3>
-                        <p>主页(介绍,项目,历史,成员,加入我们(规定/制度)),用户(游戏管理,充值,个人主页,博客),论坛(我的世界,游戏平台,闲聊,私密版块,公告,小黑屋),资源中心,Github的链接</p>
-                        <p><br></p>
-                        <h3></h3>
-                        <p></p>
-					</div>
-				</div>
-			</div>
-		</section>
-        
-        <!-- 表格 -->
-		<section id="sheet" class="text-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 col-md-12 skills">
-                        <h2>当前进度</h2>
-                        <p>由于缺乏人手,许多项目无法进行,我们等待您的<a href="./join.html">加入</a>!</p>
-                        <span>魔兽Ⅲ地图:末日战争(触发器十分混乱,等待重制)</span>
-                        <span class="pull-right">40%</span>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div>
-                        </div>
-                        <span>星际Ⅱ地图:末日战争:保卫战(等我啥时候入正再说吧)(然而基础内容已经免费了...)</span>
-                        <span class="pull-right">1%</span>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 1%;"></div>
-                        </div>
-                        <span>魔兽Ⅳ地图:末日战争:全线反击(魔兽真出4我就做)</span>
-                        <span class="pull-right">0%</span>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
-                        </div>
-                        <span>侠盗猎车:罪恶都市服务器(曾经做过一个,后来弃坑了)</span>
-                        <span class="pull-right">1%</span>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 1%;"></div>
-                        </div>
-                        <span>神秘小镇(已弃坑)</span>
-                        <span class="pull-right">5%</span>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 5%;"></div>
-                        </div>
-                        <span>小游戏合集(这个弃了就好可惜了)</span>
-                        <span class="pull-right">60%</span>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
-                        </div>
-                        <span>曙光工艺Mod(这个不会弃)</span>
-                        <span class="pull-right">10%</span>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 10%;"></div>
-                        </div>
-                        <span>样式代码输入Mod</span>
-                        <span class="pull-right">80%</span>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
-                        </div>
-                        <span>曙光核心Js(缺乏思路)</span>
-                        <span class="pull-right">5%</span>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 5%;"></div>
-                        </div>
-                        <span>空岛小帮手Js(逻辑混乱等待重写)</span>
-                        <span class="pull-right">80%</span>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
-                        </div>
-                        <span>生成二维码(等待重写GUI和多线程)</span>
-                        <span class="pull-right">90%</span>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
-                        </div>
-                        <span>曙光工艺服务器(即将开放空岛服)</span>
-                        <span class="pull-right">10%</span>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 10%;"></div>
-                        </div>
-                        <span>曙光游戏平台(我还在学C++和QT)</span>
-                        <span class="pull-right">1%</span>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 1%;"></div>
-                        </div>
-                        <span>曙光游戏引擎(仅仅提出了概念而已)</span>
-                        <span class="pull-right">0%</span>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
-                        </div>
-                        <!-- 其实叫做<我们的一班>,叙事加解谜类的,和telltale一样,将会是第一个用曙光引擎开发的游戏 -->
-                        <span>神秘的新游戏(审查元素???)</span>
-                        <span class="pull-right">0%</span>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
-                        </div>
-                        <span>官网/论坛/用户页/资源中心/充值系统(这我真...)</span>
-                        <span class="pull-right">1%</span>
-                        <div class="progress">
-                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 1%;"></div>
+        <!-- 主要内容 -->
+		<main id="home">
+            <!-- 项目 -->
+            <section id="project" class="text-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12">
+                            <h2>项目</h2>
+                            <p>我们有许多正在进行中的项目,主要与我的世界(Minecraft),魔兽争霸3(Warcraft III)有关,也有自研的曙光游戏引擎,曙光游戏平台以及曙光工作室自己的游戏,详情请进入QQ群查看.</p>
+                            <p><br></p>
+                            <h3>魔兽/星际地图系列:末日战争</h3>
+                            <p>从小学5年级开始做的一个系列,到现在还在坑,主要是现在再看小时候写的逻辑,完全说不通啊</p>
+                            <p><br></p>
+                            <h3>侠盗猎车:罪恶都市服务器</h3>
+                            <p>当时是在和王水桶侠盗联机玩,然后想自己开个服务器,然而这东西比我的世界服务器都复杂,所以不了了之了</p>
+                            <p><br></p>
+                            <h3>神秘小镇</h3>
+                            <p>我刚玩我的世界,刚接触红石和命令方块是的创想,里面包含好多个分成各个块的解谜游戏,部分剧情都想好了(抄袭鸡皮疙瘩-百变闯关大冒险系列-午夜商场怪兽派对),奈何当年是1.8时代,命令方块弱势啊,电脑还破,现在想做却没有时间了</p>
+                            <p><br></p>
+                            <h3>小游戏合集</h3>
+                            <p>1.9时代的产物,和刘洪泽一起研究命令方块,研究出了一点成果,于是做了个小游戏合集,目前已经完成了掘一死战,消失的方块,职业战争,跑酷和信仰之跃部分完成,不过1.13技术性更新出了,整个命令系统都被重制,我打算重制到1.13版本,所以半弃坑了,真的好可惜啊,这是我最用心做的地图了</p>
+                            <p><br></p>
+                            <h3>曙光工艺Mod</h3>
+                            <p>还是1.8时代,后来玩服务器玩腻了,大型mod还玩不动,正好单庆卓和石莱提供了一些创意,所以开始做Mod,看着szszss和ustc-zzzz的教程一路摸索着,MC的代码真的很乱,Mod最初是1.8版本的,叫磁力Mod(单庆卓提供的创意),然后加了一点新东西,于是改叫wc的科技Mod,然后加入了彩蛋,所以改叫曙光工艺Mod,这个Mod是不会弃坑的</p>
+                            <p><br></p>
+                            <h3>样式代码输入Mod</h3>
+                            <p>做神秘小镇的时候,想用样式代码,然后到处找方法,2B的太复杂,补丁又是直接修改,直到后来,学了szszss的coremod教程,于是做了这个,目前还差对多版本和多人联机的支持</p>
+                            <p><br></p>
+                            <h3>曙光核心Js</h3>
+                            <p>在做空岛小帮手时发现一些函数其他Js也能用得上,于是有了曙光工具集合,后来学习了js面向对象的理念,所以又加了一些类和更多的东西,最后决定叫做曙光核心Js,目前也是只有一个大概的思路</p>
+                            <p><br></p>
+                            <h3>空岛小帮手</h3>
+                            <p>刚接触Js时的作品,最初只是方便玩空岛的自动挖石机,后来又加入了自动砍树等功能,然后越积越多,逻辑混乱,不得不重写,坑了1年,现在也没完成</p>
+                            <p><br></p>
+                            <h3>生成二维码</h3>
+                            <p>有一次看见二维码一个一个块的,和我的世界很像啊,所以就有了这个想法,然后找到了Qrcode的js类库,改一改,封装一下子就做好了,不过GUI和多线程有点问题,等待完善</p>
+                            <p><br></p>
+                            <h3>曙光工艺服务器</h3>
+                            <p>筹备了三年的巨制,致力于为玩家带来优秀的游戏体验,生存,创造,空岛,海岛,极限,Mod,小游戏,战争,应有尽有,然而都是设想,并未完成</p>
+                            <p>服务器QQ主群:116162023</p>
+                            <p>版本:1.8-1.13 IP:尚未开启</p>
+                            <p><br></p>
+                            <h3>曙光游戏平台</h3>
+                            <p>最初就是个我的世界启动器而已,因为要做自己的游戏,所以改成了游戏平台,正在制作中</p>
+                            <p>里面还会有小游戏,初步计划:砸蛋(宠物),曙光狼人杀,曙光球球大作战</p>
+                            <p><br></p>
+                            <h3>曙光游戏引擎</h3>
+                            <p>一个游戏引擎,正在设想中</p>
+                            <p><br></p>
+                            <h3>神秘的新游戏</h3>
+                            <p>来放个预告,猜猜这是和什么有关的游戏呢</p>
+                            <img src="./images/class1.png">
+                            <p><br></p>
+                            <h3>官方网站</h3>
+                            <p>主页(介绍,项目,历史,成员,加入我们(规定/制度)),用户(游戏管理,充值,个人主页,博客),论坛(我的世界,游戏平台,闲聊,私密版块,公告,小黑屋),资源中心,Github的链接</p>
+                            <p><br></p>
+                            <h3></h3>
+                            <p></p>
                         </div>
                     </div>
-				</div>
-			</div>
-        </section>
+                </div>
+            </section>
+        
+            <!-- 表格 -->
+            <section id="sheet" class="text-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 skills">
+                            <h2>当前进度</h2>
+                            <p>由于缺乏人手,许多项目无法进行,我们等待您的<a href="./join.html">加入</a>!</p>
+                            <span>魔兽Ⅲ地图:末日战争(触发器十分混乱,等待重制)</span>
+                            <span class="pull-right">40%</span>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"></div>
+                            </div>
+                            <span>星际Ⅱ地图:末日战争:保卫战(等我啥时候入正再说吧)(然而基础内容已经免费了...)</span>
+                            <span class="pull-right">1%</span>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 1%;"></div>
+                            </div>
+                            <span>魔兽Ⅳ地图:末日战争:全线反击(魔兽真出4我就做)</span>
+                            <span class="pull-right">0%</span>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+                            </div>
+                            <span>侠盗猎车:罪恶都市服务器(曾经做过一个,后来弃坑了)</span>
+                            <span class="pull-right">1%</span>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 1%;"></div>
+                            </div>
+                            <span>神秘小镇(已弃坑)</span>
+                            <span class="pull-right">5%</span>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 5%;"></div>
+                            </div>
+                            <span>小游戏合集(这个弃了就好可惜了)</span>
+                            <span class="pull-right">60%</span>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                            </div>
+                            <span>曙光工艺Mod(这个不会弃)</span>
+                            <span class="pull-right">10%</span>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 10%;"></div>
+                            </div>
+                            <span>样式代码输入Mod</span>
+                            <span class="pull-right">80%</span>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
+                            </div>
+                            <span>曙光核心Js(缺乏思路)</span>
+                            <span class="pull-right">5%</span>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 5%;"></div>
+                            </div>
+                            <span>空岛小帮手Js(逻辑混乱等待重写)</span>
+                            <span class="pull-right">80%</span>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
+                            </div>
+                            <span>生成二维码(等待重写GUI和多线程)</span>
+                            <span class="pull-right">90%</span>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 90%;"></div>
+                            </div>
+                            <span>曙光工艺服务器(即将开放空岛服)</span>
+                            <span class="pull-right">10%</span>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 10%;"></div>
+                            </div>
+                            <span>曙光游戏平台(我还在学C++和QT)</span>
+                            <span class="pull-right">1%</span>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 1%;"></div>
+                            </div>
+                            <span>曙光游戏引擎(仅仅提出了概念而已)</span>
+                            <span class="pull-right">0%</span>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+                            </div>
+                            <!-- 其实叫做<我们的一班>,叙事加解谜类的,和telltale一样,将会是第一个用曙光引擎开发的游戏 -->
+                            <span>神秘的新游戏(审查元素???)</span>
+                            <span class="pull-right">0%</span>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+                            </div>
+                            <span>官网/论坛/用户页/资源中心/充值系统(这我真...)</span>
+                            <span class="pull-right">1%</span>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 1%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
         
         <!-- 页脚 -->
-		<footer class="text-center">
-			<div class="container">
-				<div class="row">
-					<p>Copyright &copy; 2015-2018 曙光工艺工作室</p>
-				</div>
-			</div>
-		</footer>
+        <footer>
+            <div class="container">
+                Powered by Bootstrap
+                <br>
+                Copyright &copy; 2015-2021 Dawncraft Studio
+            </div>
+        </footer>
 		
-		<!-- 回到顶部按钮 -->
-		<a href="#top" class="gotop">
-			<span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
-			<span class="sr-only">回到顶部</span>
-		</a>
+        <!-- 回到顶部按钮 -->
+        <a class="gotop" href="javascript:void(0)">
+            <svg class="bi bi-chevron-up" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+            </svg>
+            <span class="sr-only">回到顶部</span>
+        </a>
 	
-		<!-- 加载插件 -->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/jquery.qrcode.min.js"></script>
-		
-		<script>
-			// 生成二维码
-			$('#qrcode').qrcode({render: "canvas", width: 96, height: 96, text: "https://dawncraft.github.io/"});
-			
-			$(document).ready(function()
-			{
-				$(window).scroll(function()
-				{
-					// 展示或隐藏回到顶部按钮
-					if ($(this).scrollTop() > 100)
-					{
-						$('.gotop').fadeIn(300);
-					} else {
-						$('.gotop').fadeOut(300);
-					}
-				});
-				
-				// 滚到顶部
-				$('.gotop').click(function(event)
-				{
-					event.preventDefault();
-					$('html, body').animate({scrollTop: 0}, 500);
-				});
-			});
-		</script>
+		<!-- 加载脚本 -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.qrcode.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/NativeShare.js"></script>
+		<script src="js/main.js"></script>
     </body>
 </html>

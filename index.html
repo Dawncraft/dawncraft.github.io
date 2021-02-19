@@ -1,190 +1,198 @@
-<!-- <!DOCTYPE html> -->
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
-
+<!doctype html>
 <html>
-	<head>
-		<!-- 告诉浏览器准备接受 HTML 文档,以及字符编码集 -->
-		<meta http-equiv="Content-Type" content="tezt/html; charset=utf-8" />
-		<!-- 使 IE 以最高模式渲染 -->
-		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-		<!-- 设置视区 -->
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!-- 页面关键词 -->
-		<meta name="keywords" content="game studio,游戏工作室,minecraft,我的世界" />
-		<!-- 页面描述 -->
-		<meta name="description" content="曙光工艺工作室" />
-		<!-- 页面作者 -->
-		<meta name="author" content="Dawncraft Studio" />
-		
-		<!-- Bootstrap框架CSS样式表 -->
-		<link rel="stylesheet" href="css/bootstrap.min.css" />
-		<!-- 网页自定义css样式表 -->
-		<link rel="stylesheet" href="css/dawn_style.css" />
-		
-		<!-- 图标 -->
-		<link rel="icon" href="images/icon.ico" />
-		<!-- 标题 -->
-		<title>曙光工艺 - 首页</title>
-	</head>
-	
-	<body>
-		<!-- 顶部导航栏 -->
-		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-						<span class="sr-only">打开导航</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="#">曙光工艺工作室</a>
-				</div>
-				<div class="collapse navbar-collapse">
-					<ul class="nav navbar-nav navbar-left">
-						<li class="active"><a href="#">首页<span class="sr-only">(当前)</span></a></li>
-						<li><a href="./team.html">团队</a></li>
-						<li><a href="./projects.html">项目</a></li>
-						<li><a href="./join.html">加入我们</a></li>
-					</ul>
-					<ul class="nav navbar-nav navbar-right">
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">分享 <span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="javascript:alert('尚未开放,敬请期待');">分享给QQ好友</a></li>
-								<li role="separator" class="divider"></li>
-								<li class="dropdown-header">扫二维码分享</li>
-								<li><div id="qrcode"></div></li>
-							</ul>
-						</li>
-						<li><a href="javascript:alert('尚未开放,敬请期待');">去曙光工艺首页</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-		<!-- 轮播图 -->
-		<div id="carousel" class="carousel slide" data-ride="carousel">
-			<!-- 内容 -->
-			<div class="carousel-inner" role="listbox">
-				<!-- 第一幅图片 -->
-				<div class="item active">
-					<img class="first-slide" src="./images/slider.jpg" alt="First slide">
-					<div class="container">
-						<div class="carousel-caption">
-							<h3>梦想启程的地方</h3>
-							<p><a class="btn btn-lg btn-primary" href="#home" role="button">看看我们</a></p>
-						</div>
-					</div>
-				</div>
-				<!-- 第二幅图片 -->
-				<div class="item">
-					<img class="second-slide" src="./images/slider2.jpg" alt="Second slide">
-					<div class="container">
-						<div class="carousel-caption">
-							<h3>没有最好,只有更好</h3>
-							<p><a class="btn btn-lg btn-primary" href="./team.html" role="button">现在加入</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- 指示器 -->
-			<ol class="carousel-indicators">
-				<li data-target="#carousel" data-slide-to="0" class="active"></li>
-				<li data-target="#carousel" data-slide-to="1" class=""></li>
-			</ol>
-			<!-- 左右光标 -->
-			<a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
-				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-				<span class="sr-only">上一个</span>
-			</a>
-			<a class="right carousel-control" href="#carousel" role="button" data-slide="next">
-				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-				<span class="sr-only">下一个</span>
-			</a>
-		</div>
-		
-		<!-- 介绍 -->
-		<section id="home" class="text-center">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12 col-md-12">
-						<h2>关于我们</h2>
-                        <img src="./images/logo.png">
-						<p>这里是曙光工艺工作室,是一个怀揣梦想,充满生机的游戏工作室.</p>
-					</div>
-					<div class="col-sm-12 col-md-12">
-						<h3>负责项目</h3>
-						<p>我们主要制作与Minecraft(我的世界)有关的项目,以及维护工作室自己的曙光游戏平台,曙光引擎和游戏.</p>
-						<p>详情请点击<a href="./projects.html">这里</a></p>
-                        <p>Github:<a href="https://github.com/dawncraft/">https://github.com/dawncraft/</a></p>
-					</div>
-					<div class="col-sm-12 col-md-12">
-						<h3>成员</h3>
-						<p>我们的成员都非常友好,并且积极帮助他人</p>
-						<p>工作室鼓励且支持成员发布原创的作品</p>
-						<p>一旦通过管理员的认可,作品将会出现在官网上并得到更多帮助</p>
-					</div>
-					<div class="col-sm-12 col-md-12">
-						<h3>加入我们</h3>
-						<p>心动了?赶快加入我们</p>
-						<p>但是在加入之前您需要进行一个简单的测验</p>
-						<p>详情请点击<a href="./join.html">这里</a></p>
-						<div id="qrcode"></div>
-					</div>
-                    <div class="col-sm-12 col-md-12">
-						<h3>海报备份</h3>
-						<p>这真的只是海报的备份</p>
-                        <img src="./images/post.png">
-					</div>
-				</div>
-			</div>
-		</section>
-		
-		<!-- 页脚 -->
-		<footer class="text-center">
-			<div class="container">
-				<div class="row">
-					<p>Copyright &copy; 2015-2018 曙光工艺工作室</p>
-				</div>
-			</div>
-		</footer>
-		
-		<!-- 回到顶部按钮 -->
-		<a href="#top" class="gotop">
-			<span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
-			<span class="sr-only">回到顶部</span>
-		</a>
-	
-		<!-- 加载插件 -->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/jquery.qrcode.min.js"></script>
-		
-		<script>
-			// 生成二维码
-			$('#qrcode').qrcode({render: "canvas", width: 96, height: 96, text: "https://dawncraft.github.io/"});
-			
-			$(document).ready(function()
-			{
-				$(window).scroll(function()
-				{
-					// 展示或隐藏回到顶部按钮
-					if ($(this).scrollTop() > 100)
-					{
-						$('.gotop').fadeIn(300);
-					} else {
-						$('.gotop').fadeOut(300);
-					}
-				});
-				
-				// 滚到顶部
-				$('.gotop').click(function(event)
-				{
-					event.preventDefault();
-					$('html, body').animate({scrollTop: 0}, 500);
-				});
-			});
-		</script>
-	</body>
+    <head>
+        <!-- 已弃用 -->
+        <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> -->
+        <!-- 使IE以最高模式渲染, 使用Chrome Frame -->
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+        <!-- 设置字符编码集 -->
+        <meta charset="utf-8">
+        <!-- 设置视区 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- 页面关键词 -->
+        <meta name="keywords" content="game studio,游戏工作室,独立游戏开发,minecraft,我的世界" />
+        <!-- 页面描述 -->
+        <meta name="description" content="曙光工艺工作室官方网站" />
+        <!-- 页面作者 -->
+        <meta name="author" content="Dawncraft Studio" />
+        <!-- 图标 -->
+        <link rel="icon" href="images/favicon.ico" />
+        <!-- 标题 -->
+        <title>曙光工艺 - 首页</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <!-- My CSS -->
+        <link rel="stylesheet" href="css/common.css" />
+    </head>
+    <body>
+        <!-- 导航栏 -->
+        <nav class="navbar navbar-expand-sm fixed-top navbar-light bg-light">
+            <a class="navbar-brand" href="#">曙光工艺工作室</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" href="#">首页<span class="sr-only">(当前)</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="team.html">团队</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">项目</a></li>
+                    <li class="nav-item"><a class="nav-link" href="join.html">加入我们</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tools/index.html">工具箱</a></li>
+                    <li class="nav-item"><a class="nav-link" href="messages/index.html">留言板</a></li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="javascript:void(0)" data-toggle="dropdown">分享</a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="javascript:nativeShare.call('qqFriend')">分享给QQ好友</a>
+                            <div class="dropdown-divider"></div>
+                            <span class="dropdown-header">保存二维码来分享</span>
+                            <div class="dropdown-item-text" id="qrcode"></div>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="https://github.com/Dawncraft">GitHub</a></li>
+                    <li class="nav-item"><a class="nav-link" href="http://dawncraft.cc">博客-></a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- 巨幕 -->
+        <!-- <div class="jumbotron jumbotron-fluid"></div> -->
+
+        <!-- 轮播图 -->
+        <div id="carousel" class="carousel slide" data-ride="carousel">
+            <!-- 内容 -->
+            <div class="carousel-inner h-100">
+                <div class="carousel-item active">
+                    <img class="d-block" src="./images/slider1.jpg" alt="First slide">
+                    <div class="carousel-caption mb-4">
+                        <h4>梦想启程之处</h4>
+                        <a class="btn btn-lg btn-primary" href="#about" role="button">了解更多</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block" src="./images/slider2.jpg" alt="Second slide">
+                    <div class="carousel-caption mb-4">
+                        <h4>Minecraft磁学Mod现已在MCBBS上发布!</h4>
+                        <h5>适用于Minecraft1.12.2 with Forge</h5>
+                        <a class="btn btn-lg btn-success" href="https://www.mcbbs.net/thread-1117625-1-1.html" role="button">前去看看</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block" src="./images/slider3.jpg" alt="Third slide">
+                    <div class="carousel-caption mb-4">
+                        <h4>工作室新作正在筹划中, 欢迎加入</h4>
+                        <a class="btn btn-lg btn-primary" href="join.html" role="button">凑个热闹</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 指示器 -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel" data-slide-to="1" class=""></li>
+                <li data-target="#carousel" data-slide-to="2" class=""></li>
+            </ol>
+            <!-- 左右光标 -->
+            <a class="carousel-control-prev" href="#carousel" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">上一个</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">下一个</span>
+            </a>
+        </div>
+
+        <!-- 主要内容 -->
+        <main class="container my-4">
+            <!-- 关于我们 -->
+            <section class="row my-5" id="about">
+                <div class="col">
+                    <img src="images/logo.png">
+                </div>
+                <div class="col my-auto">
+                    <h3>关于我们</h3>
+                    <p>
+                        这里是曙光工艺工作室, 一个怀揣梦想, 充满生机的游戏工作室
+                        <br>
+                        无论是新手还是大神, 我们都欢迎您的加入
+                    </p>
+                </div>
+            </section>
+            <!-- 成员简介 -->
+            <section class="row my-4" id="members">
+                <div class="col">
+                    <h3>成员简介</h3>
+                    <p>
+                        工作室现有成员15人, 涵盖游戏策划, 美工, 程序等各个方面
+                        <br>
+                        我们的成员都非常友好, 并且积极帮助他人
+                        <br>
+                        工作室鼓励原创作品, 一旦得到认可, 您的作品将会在官网上进行展示
+                    </p>
+                </div>
+            </section>
+            <!-- 项目简介 -->
+            <section class="row my-4" id="projects">
+                <div class="col">
+                    <h3>项目简介</h3>
+                    <p>
+                        工作室主要制作与Minecraft(我的世界)有关的项目, 现正计划制作游戏, 未来还将开发工作室自己的游戏平台
+                        <br>
+                        已完成的项目有我的世界磁学Mod
+                        <br>
+                        正在进行的项目有魔兽/星际地图系列:末日战争, 我的世界小游戏合集, 曙光游戏平台, 小小枪战重制版, 独立游戏计划——战争冒险
+                        <br>
+                        项目详情请点击<a href="projects.html">这里</a>查看
+                    </p>
+                    <p></p>
+                </div>
+            </section>
+            <!-- 历史 -->
+            <section class="row my-4" id="history">
+                <div class="col">
+                    <h3>历史(WIP)</h3>
+                    <p>这有个时间轴</p>
+                </div>
+            </section>
+            <!-- 加入我们 -->
+            <section class="row my-4" id="join">
+                <div class="col">
+                    <h3>加入我们</h3>
+                    <p>
+                        心动了? 赶快加入我们
+                        <br>
+                        QQ群: 287307326
+                        <br>
+                        详情请点击<a href="join.html">这里</a>
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <!-- 页脚 -->
+        <footer>
+            <div class="container">
+                Powered by Bootstrap
+                <br>
+                Copyright &copy; 2015-2021 Dawncraft Studio
+            </div>
+        </footer>
+
+        <!-- 回到顶部按钮 -->
+        <a class="gotop" href="javascript:void(0)">
+            <svg class="bi bi-chevron-up" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+            </svg>
+            <span class="sr-only">回到顶部</span>
+        </a>
+
+        <!-- 加载脚本 -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.qrcode.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/NativeShare.js"></script>
+        <script src="js/main.js"></script>
+    </body>
 </html>
