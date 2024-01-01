@@ -1,0 +1,48 @@
+{
+    "version": "1.0.0",
+    "model": "model.moc",
+    "textures": [
+        "texture_00.png",
+        "texture_01.png",
+        "texture_02.png",
+        "texture_03.png"
+    ],
+    "layout": {
+        "width": 2.0
+    },
+    "hit_areas_custom": {
+        "head_x": [-0.3, 1.4],
+        "head_y": [0.3, 0.7],
+        "body_x": [-0.4, 0.7],
+        "body_y": [0.4, -0.9]
+    },
+    "physics": "moc/physics.json",
+    "motions": {
+        "idle": [
+            {
+                "file": "action/idle.mtn"
+            }
+        ],
+        "flick_head": [
+            {
+                "file": "action/motou.mtn"
+            }
+        ],
+        "tap_body": [
+            {
+                "file": "action/mofang.mtn"
+            }
+        ],
+        "": [
+            {
+                "file": "action/mimi.mtn"
+            }
+        ]
+    },
+    "expression": [
+        {
+            "file": "expression/idle.exp",
+            "name": "idle"
+        }
+    ]
+}
